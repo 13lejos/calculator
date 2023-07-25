@@ -1,0 +1,9 @@
+.centerSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calcContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
