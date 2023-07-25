@@ -8,14 +8,38 @@ let operatorNumber;
 let operator;
 //stored number/answer
 let storedNumber;
+//last button pressed stored
+let pressed;
 
-
+window.onload = () => {
+    document.getElementById(display);
+    display.textContent= displayNumber;
+}
 
 
 operate = (operandNumber, operatorNumber) => {
 storedNumber = operandNumber + operator + operatorNumber;
 }
 
-numberPress = (pressedNumber) => {
-alert(1)
+numberPress = (value) => {
+    pressed = value.toString();
+if (displayNumber  < 1){
+    displayNumber = pressed.toString();
+}
+else{
+    displayNumber = displayNumber.toString() + pressed.toString();
+}
+
+    console.log(pressed);
+    console.log(displayNumber);
+    document.getElementById(display);
+    display.textContent= displayNumber;
+
+}
+
+allClear = () => {
+    storedNumber = undefined;
+    displayNumber = 0;
+    document.getElementById(display);
+    display.textContent= displayNumber;
 }
