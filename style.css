@@ -66,3 +66,8 @@
 #equals{
     background-color: rgb(68, 121, 255)
 }
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

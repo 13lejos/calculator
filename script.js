@@ -90,7 +90,7 @@ allClear = () => {
 }
 
 pressOperator = (value) =>{
-if(storedNumber === undefined){
+    if(storedNumber === undefined){
 
 
     storedNumber = Number(displayNumber);
