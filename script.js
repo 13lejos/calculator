@@ -12,6 +12,8 @@ let storedNumber;
 let pressed;
 //final answer
 let finalAnswer;
+// text for the display
+let displayText;
 
 // when the window loads displays our default value 0 in our calc window
 window.onload = () => {
@@ -20,13 +22,38 @@ window.onload = () => {
 }
 
 // function to do math
-operate = (operator, storedNumber, displayNumber) => {
-if
-            storedNumber + Number(displayNumber);
-            storedNumber - Number(displayNumber);
-            storedNumber * Number(displayNumber);
-            storedNumber / Number(displayNumber);
-    
+operate = (x, a, b) => {
+a = Number(storedNumber);
+b = Number(displayNumber);
+x = operator;
+
+if( operator === '+'){
+    finalAnswer = Number(storedNumber + displayNumber);
+    console.log(finalAnswer);
+}
+else if( operator === '-'){
+    finalAnswer = Number(storedNumber - displayNumber);
+    console.log(finalAnswer);
+}
+else if(operator === 'x'){
+    finalAnswer = Number(storedNumber * displayNumber);
+    console.log(finalAnswer);
+}
+
+else if( operator === '/' && displayNumber !==0){
+    finalAnswer = Number(storedNumber / displayNumber);
+    console.log(finalAnswer);
+}
+else{
+    document.getElementById(display);
+    display.textContent= 'error';
+}
+
+
+    storedNumber = finalAnswer
+    document.getElementById(display);
+    display.textContent= Math.round(finalAnswer * 10) / 10;
+
 
 }
 
@@ -34,15 +61,15 @@ if
 //will clear if display is currently at 0
 //stops accepting numbers after 10 digits reached
 numberPress = (value) => {
-    pressed = value.toString();
-if (displayNumber  < 1){
-    displayNumber = pressed.toString();
+    pressed = value;
+if (displayNumber < 1){
+    displayNumber = Number(pressed);
 }
-else if(displayNumber.length <10) {
-    displayNumber = displayNumber.toString() + pressed.toString();
+else{
+    displayNumber = Number(displayNumber.toString() + pressed.toString());
 }
 
-    console.log(pressed);
+    console.log(pressed);;
     console.log(displayNumber);
     document.getElementById(display);
     display.textContent= displayNumber;
@@ -63,10 +90,21 @@ allClear = () => {
 }
 
 pressOperator = (value) =>{
+if(storedNumber === undefined){
+
+
     storedNumber = Number(displayNumber);
     displayNumber = Number(0);
     operator = value;
     console.log(storedNumber);
     console.log(displayNumber);
     console.log(operator);
+}
+else{
+        displayNumber = Number(0);
+    operator = value;
+    console.log(storedNumber);
+    console.log(displayNumber);
+    console.log(operator);
+}
 }
