@@ -18,7 +18,7 @@
                 </div>
             <div class="buttonContainer" id="buttonContainer">
                 <button onclick="allClear()" class="button" id="clear">AC</button>
-                <button class="button" id="equals">=</button>
+                <button onclick="operate()" class="button" id="equals">=</button>
                 <button onclick="numberPress(this.value)" class="button" id="numberOne" value="1">1</button>
                 <button onclick="numberPress(this.value)" class="button" id="numberTwo" value="2">2</button>
                 <button onclick="numberPress(this.value)" class="button" id="numberThree" value="3">3</button>
@@ -29,10 +29,10 @@
                 <button onclick="numberPress(this.value)" class="button" id="numberEight" value="8">8</button>
                 <button onclick="numberPress(this.value)" class="button" id="numberNine" value="9">9</button>
                 <button onclick="numberPress(this.value)" class="button" id="zero" value="0">0</button>
-                <button onclick="numberPress(this.value)" class="button" id="plus">+</button>
-                <button onclick="numberPress(this.value)" class="button" id="minus">-</button>
-                <button onclick="numberPress(this.value)" class="button" id="multiply">x</button>
-                <button onclick="numberPress(this.value)" class="button" id="divide">/</button>
+                <button onclick="pressOperator(this.value)" class="operator" class="button" id="plus" value="+">+</button>
+                <button onclick="pressOperator(this.value)" class="operator" class="button" id="minus" value="-">-</button>
+                <button onclick="pressOperator(this.value)" class="operator" class="button" id="multiply" value="x">x</button>
+                <button onclick="pressOperator(this.value)" class="operator" class="button" id="divide" value="/">/</button>
             </div>
             </div>
         

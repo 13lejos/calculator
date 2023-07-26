@@ -28,6 +28,7 @@
 
 .displayWindow{
     font-size: 20px;
+    letter-spacing: 6px;
 }
 
 .calcContainer{
@@ -47,4 +48,21 @@
     font-weight: bold;
     border-style: none;
     border-radius: 8px;
+}
+
+.operator{
+    background-color: rgb(165, 165, 255);
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 8px;
+}
+
+#clear{
+    background-color: rgb(255, 165, 165);
+}
+
+#equals{
+    background-color: rgb(68, 121, 255)
 }
